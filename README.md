@@ -1,20 +1,11 @@
 #  MAML-Pytorch
-PyTorch implementation of the supervised learning experiments from the paper:
-[Model-Agnostic Meta-Learning (MAML)](https://arxiv.org/abs/1703.03400).
 
-> Version 1.0: Both `MiniImagenet` and `Omniglot` Datasets are supported! Have Fun~
+# Ominiglot
 
-> Version 2.0: Re-write meta learner and basic learner. Solved some serious bugs in version 1.0.
+## Howto
+- Run `python omniglot_train.py`, the program will download `omniglot` dataset automatically.
 
-For Tensorflow Implementation, please visit official [HERE](https://github.com/cbfinn/maml) and simplier version [HERE](https://github.com/dragen1860/MAML-TensorFlow).
-
-For First-Order Approximation Implementation, Reptile namely, please visit [HERE](https://github.com/dragen1860/Reptile-Pytorch).
-
-![heart](res/heart.gif)
-
-# Platform
-- python: 3.x
-- Pytorch: 0.4+
+- For 5-way 1-shot exp., it allocates nearly 3GB GPU memory.
 
 # MiniImagenet
 
@@ -49,11 +40,7 @@ miniimagenet/
 ```
 to your actual data path.
 
-4. just run `python miniimagenet_train.py` and the running screenshot is as follows:
-![screenshot-miniimagetnet](res/mini-screen.png)
-
-If your reproducation perf. is not so good, maybe you can enlarge your `training epoch` to get longer training. And MAML is notorious for its hard training. Therefore, this implementation only provide you a basic start point to begin your research.
-and the performance below is true and achieved on my machine.
+4. Run `python miniimagenet_train.py`
 
 ## Benchmark
 
@@ -66,18 +53,7 @@ and the performance below is true and achieved on my machine.
 | **Ours**                            | Y         | 46.2%      | 60.3%	| -    		 | - 	|
 
 
-
-# Ominiglot
-
-## Howto
-run `python omniglot_train.py`, the program will download `omniglot` dataset automatically.
-
-decrease the value of `args.task_num` to fit your GPU memory capacity.
-
-For 5-way 1-shot exp., it allocates nearly 3GB GPU memory.
-
-
-# Refer to this Rep.
+# Reference taken from the following repository.
 ```
 @misc{MAML_Pytorch,
   author = {Liangqu Long},
